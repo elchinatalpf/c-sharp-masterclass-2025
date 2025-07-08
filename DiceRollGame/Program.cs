@@ -1,6 +1,4 @@
-﻿
-
-using DiceRollGame.Game;
+﻿using DiceRollGame.Game;
 
 var random = new Random();
 var diceRollResult = random.Next(1, 7);
@@ -12,4 +10,7 @@ GuessingGame.PrintResult(gameResult);
 
 
 Console.WriteLine(gameResult);
+
+PolymorphismExample.Run();
+
 Console.ReadKey();
