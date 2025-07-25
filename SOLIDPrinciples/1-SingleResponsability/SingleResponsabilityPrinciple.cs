@@ -1,4 +1,6 @@
-﻿namespace SOLIDPrinciples.SingleResponsability;
+﻿using SOLIDPrinciples.SingleResponsability.DataAccess;
+
+namespace SOLIDPrinciples.SingleResponsability;
 
 
 

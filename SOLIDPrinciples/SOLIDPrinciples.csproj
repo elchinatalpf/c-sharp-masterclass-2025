@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="2-OpenClosed\" />
     <Folder Include="3-LiskovSubstitution\" />
     <Folder Include="4-InterfaceSegregation\" />
     <Folder Include="5-DependencyInversion\" />
