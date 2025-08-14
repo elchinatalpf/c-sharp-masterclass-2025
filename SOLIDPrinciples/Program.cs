@@ -2,22 +2,27 @@
 
 using SOLIDPrinciples;
 
-int seasonNumber = 0;
-Season spring = (Season)seasonNumber;
+//int seasonNumber = 0;
+//Season spring = (Season)seasonNumber;
 
-decimal a = 10.01m;
-int integer = 10;
-decimal b = integer; // Implicit conversion from int to decimal
+//decimal a = 10.01m;
+//int integer = 10;
+//decimal b = integer;
 
-internal enum Season
-{
-    Spring,
-    Summer,
-    Autumn,
-    Winter
-}
+//decimal c = 10000000000000000000000000000000000000000000.01m; // This is a valid decimal literal
+//int d = (int)c; // This will cause a compile-time error because the value is too large for an int
 
+//string s = (string)integer; // This will cause a compile-time error because int cannot be implicitly converted to string
+//int secondSeasonNumber = 1;
+//Season summer = (Season)secondSeasonNumber;
 
+//internal enum Season
+//{
+//    Spring,
+//    Summer,
+//    Autumn,
+//    Winter
+//}
 
 //SingleResponsabilityPrinciple.Run();
 
@@ -28,11 +33,22 @@ internal enum Season
 
 //Console.WriteLine(pizza.ToString());
 
-var ingredient = new Ingredient(1);
-var cheddar = new Cheddar(2, 12);
-Console.WriteLine(cheddar);
+Ingredient ingredient = new Cheddar(2, 12);
+
+Ingredient randomIngredient = GenerateRandomIngredient();
+Console.WriteLine("Random ingredient is " + randomIngredient);
+Cheddar cheddar = (Cheddar)randomIngredient;
 
 Console.ReadLine();
+
+Ingredient GenerateRandomIngredient()
+{
+    var random = new Random();
+    var number = random.Next(1,4); // Generates a random number between 1 and 3
+    if (number == 1) { return new Cheddar(2, 12);  }
+    if (number == 2) { return new TomatoSauce(1); }
+    else return new Mozzarella(2);
+}
 
 public class Pizza
 {
