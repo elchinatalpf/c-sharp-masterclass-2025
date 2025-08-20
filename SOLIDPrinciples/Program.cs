@@ -37,9 +37,28 @@ Ingredient ingredient = new Cheddar(2, 12);
 
 Ingredient randomIngredient = GenerateRandomIngredient();
 Console.WriteLine("Random ingredient is " + randomIngredient);
-Cheddar cheddar = (Cheddar)randomIngredient;
 
-Console.ReadLine();
+//Console.WriteLine("is object? " + (ingredient is object));
+//Console.WriteLine("is ingredient? " + (ingredient is Ingredient));
+//Console.WriteLine("is cheddar? " + (ingredient is Cheddar));
+//Console.WriteLine("is mozzarella? " + (ingredient is Mozzarella));
+//Console.WriteLine("is tomato sauce? " + (ingredient is TomatoSauce));
+
+//if(randomIngredient is Cheddar)
+//{
+//    Cheddar cheddar = (Cheddar)randomIngredient; // This will throw an InvalidCastException if randomIngredient is not a Cheddar
+//    Console.WriteLine("cheddar object: " + cheddar);
+//} else
+//{
+//    Console.WriteLine("The random ingredient is not a Cheddar.");
+//}
+
+if (randomIngredient is Cheddar cheddar)
+{
+    Console.WriteLine("cheddar object: " + cheddar);
+}
+
+    Console.ReadLine();
 
 Ingredient GenerateRandomIngredient()
 {
